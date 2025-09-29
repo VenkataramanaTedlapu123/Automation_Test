@@ -8,7 +8,7 @@ logger.setLevel(logging.INFO)
 handler = SplunkHecHandler(
     host="localhost",
     port=8088,
-    token="YOUR_HEC_TOKEN",
+    token="4ce43004-99c0-4339-8af2-9e657cecfb99",
     index="main",
     proto="http",
     verify=False,
