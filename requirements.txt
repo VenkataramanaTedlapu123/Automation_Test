@@ -1,0 +1,2 @@
+pytest
+splunk-hec-handler
