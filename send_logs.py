@@ -12,7 +12,7 @@ handler = SplunkHecHandler(
     token="4ce43004-99c0-4339-8af2-9e657cecfb99",
     index="main",
     proto="https",            # HTTPS
-    verify=False,             # Set True if you have cert
+    verify=True,             # Set True if you have cert
     sourcetype="pytests_demo"
 )
 logger.addHandler(handler)
