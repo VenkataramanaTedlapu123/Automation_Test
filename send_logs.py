@@ -34,14 +34,12 @@ for testcase in root.iter("testcase"):
         status = "error"
         message = testcase.find("error").text
 
-    # Send as JSON
+    # ✅ Send event directly
     log_event = {
-        "event": {
-            "test_name": name,
-            "class_name": classname,
-            "status": status,
-            "message": message
-        }
+        "test_name": name,
+        "class_name": classname,
+        "status": status,
+        "message": message
     }
 
     try:
@@ -49,4 +47,3 @@ for testcase in root.iter("testcase"):
     except Exception as e:
         print(f"Failed to send log to Splunk: {e}")
 
-print("Pytest results sent to Splunk successfully!")
